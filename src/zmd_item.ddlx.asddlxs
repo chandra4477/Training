@@ -1,0 +1,73 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZC_MD_ITEM_UM
+    with 
+{
+@UI:{
+     lineItem: [{ position: 10 , label: 'MaterialDoc'}],
+     identification: [{ position: 10, label: 'MaterialDoc' }]
+     }
+   MaterialDocument;
+@UI:{
+     lineItem: [{ position: 20 , label: 'DocYear'}],
+     identification: [{ position: 20, label: 'DocYear' }]
+     }    
+   DocumentYear;
+@UI:{
+     lineItem: [{ position: 30 , label: 'DocItem'}],
+     identification: [{ position: 30, label: 'Docitem' }]
+     }    
+   DocumentItem;
+@UI:{
+     lineItem: [{ position: 40 , label: 'Material'}],
+     identification: [{ position: 40, label: 'Material' }]
+     }     
+   Material;
+@UI:{
+     lineItem: [{ position: 40 , label: 'Plant'}],
+     identification: [{ position: 40, label: 'Plant' }]
+     }     
+   Plant;
+@UI:{
+     lineItem: [{ position: 50 , label: 'Sloc'}],
+     identification: [{ position: 50, label: 'Sloc' }]
+     }     
+   StorageLocation;
+@UI:{
+     lineItem: [{ position: 60 , label: 'GoodsMovtype'}],
+     identification: [{ position: 60, label: 'GoodMovType' }]
+     }     
+   GoodsMovementType;
+@UI:{
+     lineItem: [{ position: 70 , label: 'PO'}],
+     identification: [{ position: 70, label: 'PO' }]
+     }     
+   PurchaseOrder;
+@UI:{
+     lineItem: [{ position: 80 , label: 'POItem'}],
+     identification: [{ position: 80, label: 'Poitem' }]
+     }     
+   PurchaseOrderItem;
+@UI:{
+     lineItem: [{ position: 90 , label: 'GoodsMovRef'}],
+     identification: [{ position: 90, label: 'GoodsMovRef' }]
+     }     
+   GoodsMovementRefDocType;
+    @UI.hidden: true
+   GoodsMovementReasonCode;
+ @UI:{
+     lineItem: [{ position: 100 , label: 'Quantity'}],
+     identification: [{ position: 100, label: 'Quantity' }]
+     }   
+   QuantityInEntryUnit;
+       @UI.hidden: true
+   EntryUnit;
+    @UI.hidden: true
+   IsCompletelyDelivered;
+    @UI.hidden: true
+   lastchangedat;
+    @UI.hidden: true
+   totallastchangedat;
+   /* Associations */
+//   _header;
+    
+}

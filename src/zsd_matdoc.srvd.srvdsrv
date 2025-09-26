@@ -1,0 +1,5 @@
+@EndUserText.label: 'SD for MatDoc header & line item'
+define service ZSD_MATDOC {
+  expose ZC_MD_HEADER_UM as header;
+  expose ZC_MD_ITEM_UM   as item;
+}

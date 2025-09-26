@@ -1,0 +1,53 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZC_MD_HEADER_UM
+    with 
+{
+@UI.facet: [{ id:'MatHeader', type: #IDENTIFICATION_REFERENCE, label: 'Header', position: 10 },
+            { id:'MatItem', type: #LINEITEM_REFERENCE, label: 'Item',position: 20,targetElement: '_item'}
+           ]
+
+@UI:{
+     lineItem: [{ position: 10 , label: 'MaterialDoc'}],
+     identification: [{ position: 10, label: 'MaterialDoc' }],
+     selectionField: [{ position: 10  }]
+     }
+    MaterialDocument;
+@UI:{
+     lineItem: [{ position: 20 , label: 'DocYear'}],
+     identification: [{ position: 20, label: 'DocYear' }],
+     selectionField: [{ position: 20 }]
+     }    
+    DocumentYear;
+@UI:{
+     lineItem: [{ position: 30 , label: 'Reference'}],
+     identification: [{ position: 30, label: 'Reference' }]
+     }    
+    ReferenceDocument;
+@UI:{
+     lineItem: [{ position: 40 , label: 'Supplier'}],
+     identification: [{ position: 40, label: 'Supplier' }]
+     }    
+    Supplier;
+@UI:{
+     lineItem: [{ position: 50 , label: 'GoodsMovCode'}],
+     identification: [{ position: 50, label: 'GoodsMovCode' }]
+     }    
+    GoodsMovementCode;
+@UI:{
+     lineItem: [{ position: 60 , label: 'RecPlant'}],
+     identification: [{ position: 60, label: 'RecPlant' }]
+     }    
+    ReceivingPlant;
+@UI:{
+     lineItem: [{ position: 70 , label: 'HeaderTxt'}],
+     identification: [{ position: 70, label: 'HeaderTxt' }]
+     }    
+    MaterialDocumentHeaderText;
+     @UI.hidden: true
+    lastchangedat;    
+      @UI.hidden: true
+    totallastchangedat;
+    /* Associations */
+  //  _item;
+    
+}

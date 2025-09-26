@@ -1,0 +1,4 @@
+@EndUserText.label: 'Serial number'
+define service ZSD_SERIAL_NUM {
+  expose ZC_MD_UPDATE_SERIAL;
+}

@@ -1,0 +1,5 @@
+CLASS zbp_i_md_header_um DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_md_header_um.
+ENDCLASS.
+
+CLASS zbp_i_md_header_um IMPLEMENTATION.
+ENDCLASS.

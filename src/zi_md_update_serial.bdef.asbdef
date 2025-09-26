@@ -1,0 +1,23 @@
+managed implementation in class zbp_i_md_update_serial unique;
+strict ( 2 );
+
+define behavior for ZI_MD_UPDATE_SERIAL //alias <alias_name>
+persistent table zserial_handle
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Materialdocument, Documentyear, Documentitem, SerialNum;
+  mapping for zserial_handle corresponding
+    {
+      Materialdocument   = materialdocument;
+      DocumentYear       = documentyear;
+      DocumentItem       = documentitem;
+      SerialNum           = serial_num;
+      Material           = material;
+      quantityinentryunit = Quantityinentryunit;
+    }
+}

@@ -1,0 +1,27 @@
+unmanaged implementation in class zbp_i_md_header_um unique;
+strict ( 2 );
+
+define behavior for ZI_MD_HEADER_UM //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) MaterialDocument, DocumentYear;
+  association _item { create; }
+}
+
+define behavior for ZI_MD_ITEM_UM //alias <alias_name>
+//late numbering
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) MaterialDocument, DocumentYear, DocumentItem;
+  association _header;
+}
